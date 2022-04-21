@@ -42,7 +42,6 @@ export default class Modals {
 
     lastModal.classList.remove('active-modal');
     document.body.classList.remove('lock');
-    
   }
 
   handleCloseButtonClick(event) {

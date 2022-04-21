@@ -14,6 +14,6 @@
     @media (max-width: 560px) { @content; }
 }
 
-@mixin mobile-second {
+@mixin mobile-s {
     @media (max-width: 400px) { @content; }
 }

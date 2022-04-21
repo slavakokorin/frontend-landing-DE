@@ -20,7 +20,7 @@
     flex-direction: column;
     max-width: 284px;
 
-    @include mobile-second {
+    @include mobile-s {
       margin-top: 20px;
     }
   
@@ -59,7 +59,7 @@
         color: var(--light-blue);
       }
 
-      @include mobile-second {
+      @include mobile-s {
         margin-top: 20px;
       }
     }

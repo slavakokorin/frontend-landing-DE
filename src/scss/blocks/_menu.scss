@@ -62,7 +62,7 @@
   background: var(--light-blue);
   display: none;
 
-  @include mobile {
+  @include tablet-s {
     width: 250px;
     height: 100vh;
   }
@@ -91,7 +91,7 @@
     font-size: 18px;
   }
   
-  @include mobile {
+  @include tablet-s {
     font-size: 14px;
   }
 }

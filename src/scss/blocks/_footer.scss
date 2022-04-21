@@ -13,122 +13,126 @@ footer {
 }
 
 .footer {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
   
-    color: var(--main-bg-color);
+  color: var(--main-bg-color);
   
-    background: var(--footer-color);
-    border-radius: 0px 200px 0px 0px;
+  background: var(--footer-color);
+  border-radius: 0px 200px 0px 0px;
 
+  @include tablet {
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 0px 100px 0px 0px;
+  }
+    
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    margin-top: 91px;
+    padding-left: 28px;
+      
     @include tablet {
-        flex-direction: column;
-        margin-top: 20px;
-        border-radius: 0px 100px 0px 0px;
+      margin: 20px 20px 20px 0;
     }
     
-    &__banner {
+    &__title {
       display: flex;
-      flex-direction: column;
-      max-width: 480px;
-      margin-top: 91px;
-      padding-left: 28px;
-      
-      @include tablet {
-        margin: 20px;
-      }
+       max-width: 317px;
     
-      &__title {
+      h2 {
         display: flex;
-        max-width: 317px;
     
-        h2 {
-          display: flex;
-    
-          font-size: 36px;
-          font-weight: 500;
-          line-height: 1.28em;
-          letter-spacing: 0.05em;
-
-          @include mobile {
-            font-size: 25px;
-            padding-left: 20px;
-          }
-        }
-      }
-    
-      &__text {
-        display: flex;
-        max-width: 460px;
-        margin-top: 32px;
-    
-        opacity: 0.5;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.28em;
+        letter-spacing: 0.05em;
 
         @include mobile {
+          font-size: 25px;
           padding-left: 20px;
         }
       }
     }
-
-    &__button {
-      margin: 165px 20px 0 180px;
-      max-height: 56px;
-      width: 220px;
-
-      font-size: 16px;
-
-      @include tablet {
-        margin: 20px 20px 0 280px;
-      }
+    
+    &__text {
+      display: flex;
+      max-width: 460px;
+      margin-top: 32px;
+    
+      opacity: 0.5;
 
       @include mobile {
-        margin: 40px auto 0 40px;
+        padding-left: 20px;
       }
     }
+  }
+
+  &__button {
+    margin: 165px 20px 0 180px;
+    max-height: 56px;
+    width: 220px;
+
+    font-size: 16px;
+
+    @include tablet {
+      margin: 20px 20px 0 280px;
+    }
+
+    @include mobile {
+      margin: 40px auto 0 60px;
+    }
+
+    @include mobile-s {
+      margin: 40px auto 0 40px;
+    }
+  }
     
-    &__line {
-      width: 80%;
-      margin-top: 96px;
-      border-bottom: 1px solid #FFFFFF;
-      opacity: 0.4;
+  &__line {
+    width: 80%;
+    margin-top: 96px;
+    border-bottom: 1px solid #FFFFFF;
+    opacity: 0.4;
 
-      @include tablet {
-        margin-top: 40px;
-      }
+    @include tablet {
+       margin-top: 40px;
     }
+  }
     
-    &__down {
-      display: flex;
-      flex-direction: row;
-      max-width: 940px;
-      flex-wrap: wrap;
-      margin: 97px auto 0 auto;
+  &__down {
+    display: flex;
+    flex-direction: row;
+    max-width: 940px;
+    flex-wrap: wrap;
+    margin: 97px auto 0 auto;
 
-      @include tablet {
-        margin: 0;
-        padding-top: 20px;
-      }
+    @include tablet {
+      margin: 0;
+      padding-top: 20px;
     }
+  }
 
-    &__info {
-        display: flex;
-        flex-direction: column;
-        max-width: 163px;
-        margin-left: 100px;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 163px;
+    margin-left: 100px;
       
-        &__title {
-          font-size: 20px;
-          line-height: 1.5em;
-          font-weight: 500;
-          margin-bottom: 16px;
-        }
+    &__title {
+      font-size: 20px;
+      line-height: 1.5em;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
 
-        @include tablet {
-          max-width: 203px;
-          margin: 0;
-          padding: 20px;
-        }
+    @include tablet {
+      max-width: 203px;
+      margin: 0;
+      padding: 20px;
       }
+    }
     
     &__social {
     display: flex;
@@ -137,9 +141,9 @@ footer {
     margin-left: 77px;
     
     &__title {
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: 16px;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 16px;
     }
 
     @include tablet {
