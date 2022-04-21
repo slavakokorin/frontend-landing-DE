@@ -1,0 +1,98 @@
+.feedback-form__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.feedback-form__title {
+    margin-right: 100px;
+    font-size: 20px;
+    line-height: 1.5em;
+    font-weight: 500;
+
+    letter-spacing: 0.04em;
+  }
+
+.feedback-form__main {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__close-button {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.feedback-form__row {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 428;
+  margin-top: 48px;
+
+  @include tablet {
+    margin-top: 20px;
+  }
+
+  @include mobile {
+    margin-top: 10px;
+  }
+}
+
+.feedback-form__input {
+  margin-top: 8px;
+  padding: 21px 42px;
+    
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 300;
+  background-color: var(--main-bg-color);
+  border: 1px solid rgba(53, 110, 173, 0.4);
+  border-radius: 10px;
+  box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+ 
+  cursor: text;
+
+  @include tablet {
+    padding: 10px 20px;
+  }
+
+  @include mobile {
+    padding: 5px;
+    margin-top: 0;
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 0.4;
+}
+
+textarea {
+  height: 140px;
+  resize: none;
+
+  @include mobile {
+    height: 100px;
+    resize: none;
+  }
+}
+
+.submit {
+  margin-top: 72px;
+  padding: 23px;
+    
+  font-weight: 500;
+  line-height: 1.6em;
+  letter-spacing: 0.04em;
+  box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.5);
+
+  padding: 21px 42px;
+
+  @include tablet {
+    margin-top: 30px;
+    padding: 10px;
+  }
+}
+
+.is-invalid {
+  border-color: red;
+}

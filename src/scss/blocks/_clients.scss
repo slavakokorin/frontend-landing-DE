@@ -1,0 +1,131 @@
+.clients {
+    margin: 0px auto;
+    padding: 96px 0 125px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 1366px;
+    
+    background: var(--light-blue);
+    border-radius: 200px 0px 0px 0px;
+
+    @include tablet {
+        padding: 50px 20px 20px 20px;
+        border-radius: 100px 0px 0px 0px;
+    }
+    
+    &__banner {
+        display: flex;
+        max-width: 940px;
+
+        @include tablet {
+            margin-left: 20px;
+        }
+
+        @include mobile {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    
+        &-title {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 223px;
+
+            @include mobile {
+                max-width: 300px;
+                padding-bottom: 20px;
+            }
+
+            h2 {
+                display: flex;
+
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 1.28em;
+                letter-spacing: 0.041em;
+
+                color: var(--btn-txt-color);
+
+                @include tablet {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        &-text {
+            display: flex;
+            max-width: 540px;
+            margin: 0 80px 0 97px;
+
+            color: var(--btn-txt-color);
+            opacity: 0.6;
+
+            @include tablet {
+                margin: 0 40px 0 40px;   
+            }
+
+            @include mobile {
+                margin: 0;   
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 940px;
+        margin-top: 123px;
+
+        @include tablet {
+            margin: 0;
+            padding: 20px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 235px;
+        padding: 56px 44px;
+
+        font-family: Gilroy, Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 2.30em;
+            
+        letter-spacing: 0.02em;
+
+        color: var(--btn-txt-color);
+
+        &:last-child {
+            max-height: 128px;
+            background: rgba(#1F3F68, 0.2);
+        }
+
+        &:nth-child(-n+3) {
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        &:nth-child(4) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        &:nth-child(n+5):nth-child(-n+7) {
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @include tablet {
+            margin: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @include mobile {
+          flex-basis: 157px;
+          padding: 30px 5px;
+        }
+    }
+}

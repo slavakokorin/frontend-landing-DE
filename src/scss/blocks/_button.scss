@@ -1,0 +1,18 @@
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15px;
+    
+
+    font-family: Gilroy, Arial, Helvetica, sans-serif;
+    color: var(--btn-txt-color);
+    background: var(--light-blue);
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    border-radius: 10px;
+
+    @include mobile {
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+}

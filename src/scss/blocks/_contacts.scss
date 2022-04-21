@@ -1,0 +1,40 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    max-width: 299px;
+    margin-left: 48px;
+  
+    &__logo {
+      display: flex;
+      align-items: center;
+    
+      &__company-name {
+        margin-left: 15px;
+        
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.64em;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    &__item {
+      display: flex;
+      margin-top: 24px;
+    
+      &--min-mrgn {
+        margin-top: 16px
+      }
+    
+      &--ltr-spacing-down {
+        letter-spacing: 0.04em;
+      }
+    }
+
+    @include tablet {
+      max-width: 339px;
+      margin: 0;
+      padding: 20px;
+    }
+  }
+  

@@ -1,0 +1,67 @@
+.infocard {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  max-height: 525px;
+  padding: 0 48px 48px 48px;
+  
+  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+
+  @include mobile {
+    max-width: 350px;
+    max-height: 507px;
+    padding: 0 20px 20px 20px;
+  }
+
+  &__content {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    max-width: 284px;
+
+    @include mobile-second {
+      margin-top: 20px;
+    }
+  
+    &__title {
+      font-family: Gilroy, Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5em;
+      
+      color: var(--blue);
+
+      letter-spacing: 0.048em;
+    }
+
+    &__text {
+      margin-top: 16px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      opacity: 0.6;
+    }
+    
+    &__btn {
+      margin-top: 32px;
+      width: 127px;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__caption {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 2.14em;
+        letter-spacing: 0.05em;
+        
+        color: var(--light-blue);
+      }
+
+      @include mobile-second {
+        margin-top: 20px;
+      }
+    }
+  }
+}

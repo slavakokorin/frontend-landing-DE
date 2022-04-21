@@ -1,0 +1,47 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+    
+    &__title {
+        font-family: Galien, Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 1.16em;
+        letter-spacing: 0.038em;
+
+
+        @include tablet {
+            font-size: 54px;
+        }
+
+        @include mobile {
+            font-size: 44px;
+        }
+
+        @include mobile-second {
+            font-size: 30px;
+        }
+    }
+      
+    &__info {
+        display: flex;
+        max-width: 425px;
+        margin-top: 32px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        opacity: 0.7;
+
+        @include tablet-xl {
+            opacity: 1;
+        }
+    }
+      
+    &__btn {
+        width: 220px;
+        margin-top: 71px;
+
+        @include mobile-second {
+            margin-top: 30px;
+        }
+    }
+}

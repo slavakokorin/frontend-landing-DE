@@ -1,0 +1,55 @@
+.our-work {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 940px;
+    padding: 180px 0;
+    background: #FFFFFF;
+
+    @include tablet {
+        padding: 40px 0;
+        justify-content: center;
+    }
+
+    &__title {
+        position: relative;
+        top: 12px;
+        max-width: 358px;
+        color: var(--footer-color);
+
+        @include tablet {
+            max-width: 400px;
+            left: 15px;
+          }
+
+        h2 {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1.28em;
+        letter-spacing: 0.046em;
+
+        color: var(--footer-color);
+
+          @include tablet {
+            font-size: 30px;
+          }
+
+          @include mobile-second {
+            font-size: 25px;
+          }
+        }
+    }
+
+    &__column--first,
+    &__column--second {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__column--second {
+        padding-left: 85px;
+
+        @include tablet {
+          padding: 0;
+        }
+    }
+}
