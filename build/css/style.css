@@ -273,6 +273,12 @@ body {
   transform: rotate(-45deg);
 }
 
+.menu--active .menu__nav {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
 .menu__nav {
   position: absolute;
   top: 0;
@@ -283,12 +289,6 @@ body {
   height: 100%;
   background: var(--light-blue);
   display: none;
-}
-
-.menu--active .menu__nav {
-  display: flex;
-  justify-content: end;
-  align-items: flex-end;
 }
 
 .menu__link {
@@ -1046,14 +1046,14 @@ textarea {
 }
 
 @media (max-width: 800px) {
-  .menu__nav {
-    width: 250px;
-    height: 100vh;
-  }
-
   .menu--active .menu__nav {
     flex-direction: column;
     justify-content: center;
+  }
+
+  .menu__nav {
+    width: 250px;
+    height: 100vh;
   }
 
   .menu__link {
