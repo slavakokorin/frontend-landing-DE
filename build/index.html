@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20220421231131">
+  <link rel="stylesheet" href="css/style.min.css?_v=20220424125407">
   <title>homepage</title>
 </head>
   <body>
     <header class="header">
   <div class="header__top header__top--fixed">
-    <div class="header__top__content">
+    <!-- <div class="header__top__content">
       <div class="logo">
         <a href="#" title="наша домашняя страница">
           <div>
@@ -23,17 +23,55 @@
           <span class="menu__lines"></span>
         </a>
         <nav class="menu__nav">
-           <a href="#our-work" class="menu__link" title="наша деятельность">OUR WORK</a>
+           <a href="#our-work-examples" class="menu__link" title="наша деятельность">OUR WORK</a>
            <a href="#our-clients" class="menu__link" title="наши клиенты">OUR CLIENTS</a>
            <a href="#lets-talk" class="menu__link" title="обратная связь">LETS TALK</a>
-           <a href="#contacts" class="menu__link" title="контакты">CONTACTS</a>
+           <a href="#our-contacts" class="menu__link" title="контакты">CONTACTS</a>
         </nav>
       </div>
     </div>
+  </div> -->
+
+
+  <div class="header__top__content">
+    <div class="logo">
+      <a href="#" title="наша домашняя страница">
+        <div>
+          <img src="img/sprite-logo.svg" width="48" height="32" alt="logo">
+        </div>
+      </a>
+    </div>
+    
+    <div class="menu">
+      <button type="button" class="burger__button">
+        <span class="burger__lines"></span>
+      </button>
+  
+
+      <nav class="menu__nav">
+        <ul>
+          <li><a href="#our-work-examples" class="menu__link" title="наша деятельность">OUR WORK</a></li>
+          <li><a href="#our-clients" class="menu__link" title="наши клиенты">OUR CLIENTS</a></li>
+          <li><a href="#lets-talk" class="menu__link" title="обратная связь">LETS TALK</a></li>
+          <li><a href="#our-contacts" class="menu__link" title="контакты">CONTACTS</a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+
   </div>
+</div>
+
+
+
+
+
+
+
   <div class="container container--relative">
     <section class="header__banner banner">
-      <div class="banner__title">New Automation<br>Tool for Your Home</div>
+      <div class="banner__title"><h1>New Automation Tool for Your Home</h1></div>
       <div class="banner__info">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.
         </p>
@@ -48,7 +86,7 @@
    
     <main class="main">
   <div class="container container--centred">
-    <div id="our-work" class="our-work">
+    <div id="our-work-examples" class="our-work">
       <section class="our-work__column--first">
         <div class="our-work__title">
           <h2>What we do to help
@@ -163,7 +201,7 @@
         <div class="footer__top--centred">
           <div class="footer__banner">
             <div class="footer__banner__title">
-              <h2>Intersted to work<br>with our team?</h2>
+              <h2>Intersted to woek<br>with our team?</h2>
             </div>
             <div class="footer__banner__text">
               <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span>
@@ -172,54 +210,63 @@
           <button class="footer__button button open-feedback-form" data-js-modal-open-button='{"src": "#modal-feedback"}'>Let’s Talk</button>
         </div>
         <div class="footer__line"></div>
-        <div id="contacts" class="footer__down">
-          <div class="contacts" id="contacts">
-            <a class="contacts__logo" href="#" title="наша домашняя страница">
-              <div width="48" height="48">
-                <img src="img/logo-light.svg" width="48" height="48" alt="logo">
-              </div>
-              <div class="contacts__logo__company-name">
-                <p>Afrianska</p>
-              </div>
-            </a>
-            <div class="contacts__item">
-              <div class="label">
-                <p>A.</p>
-              </div>
-              <div class="about">
-                <p>Lorem ipsum dolor sit amet,<br>consectetur adipisicing elit.</p>
-              </div>
-            </div>
-            <div class="contacts__item">
-              <div class="label">
-                <p>T.</p>
-              </div>
-              <div class="phone">
-                <a rel="contact" href="tel:" data-js-picker-current-phone>+62-812-7313-4321</a>
-              </div>
-            </div>
-            <div class="contacts__item">
-              <div class="label">
-                <p>E</p>
-              </div>
-              <div class="email">
-                <a rel="contact" href="hello.afrian@gmail.com">hello.afrian@gmail.com</a>
-              </div>
-            </div>
+        <div id="our-contacts" class="footer__down">
+
+          <div class="contacts">
+            <ul>
+              <li>
+                <a class="contacts__logo" href="#" title="наша домашняя страница">
+                  <div width="48" height="48">
+                    <img src="img/logo-light.svg" width="48" height="48" alt="logo">
+                  </div>
+                  <div class="contacts__logo__company-name"><p>Afrianska</p></div>
+                </a>
+              </li>
+              <li>
+                <div class="contacts__item">
+                  <div class="label">
+                    <p>A.</p>
+                  </div>
+                  <div class="about"><p>Lorem ipsum dolor sit amet,<br>consectetur adipisicing elit.</p></div>
+                </div>
+              </li>
+              <li>
+                <div class="contacts__item">
+                  <div class="label">
+                    <p>T.</p>
+                  </div>
+                  <div class="phone"><a rel="contact" href="tel:">+62-812-7313-4321</a></div>
+                </div>
+              </li>
+              <li>
+                <div class="contacts__item">
+                  <div class="label"><p>E</p></div>
+                  <div class="email">
+                    <a rel="contact" href="hello.afrian@gmail.com">hello.afrian@gmail.com</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
+
           <div class="footer__info">
-            <p class="footer__info__title">About US</p>
-            <a class="contacts__item contacts__item--min-mrgn" href="#" title="о нас">About</a>
-            <a class="contacts__item contacts__item--min-mrgn" href="#" title="наша философия">What We Do</a>
-            <a class="contacts__item contacts__item--min-mrgn" href="#" title="наш проект">Project</a>
-            <a class="contacts__item contacts__item--min-mrgn contacts__item--ltr-spacing-down" href="#" title="сотрудничество с нами">How It Work With Us</a>
+            <ul>
+              <li><h2 class="footer__info__title">About US</h2></li>
+              <li><a class="contacts__item contacts__item--min-mrgn" href="#" title="о нас">About</a></li>
+              <li><a class="contacts__item contacts__item--min-mrgn" href="#" title="наша философия">What We Do</a></li>
+              <li><a class="contacts__item contacts__item--min-mrgn" href="#" title="наш проект">Project</a></li>
+              <li><a class="contacts__item contacts__item--min-mrgn contacts__item--ltr-spacing-down" href="#" title="сотрудничество с нами">How It Work With Us</a></li>
+            </ul>
           </div>
+
           <div class="footer__social">
-            <a class="footer__social__title">Follow US</a>
-            <a class="contacts__item contacts__item--min-mrgn" href="#" title="мы в Instagram">Instagram</a>
-            <a class="contacts__item contacts__item--min-mrgn" href="#" title="мы на Facebook">Facebook</a>
-            <a class="contacts__item contacts__item--min-mrgn" href="#" title="мы на LinkedIn">LinkedIn</a>
-            <a class="contacts__item contacts__item--min-mrgn" href="#" title="мы в Youtube">Youtube</a>
+            <ul>
+              <li><h2 class="footer__social__title">Follow US</h2></li>
+              <li><a class="contacts__item contacts__item--min-mrgn" href="#" title="мы в Instagram">Instagram</a></li>
+              <li><a class="contacts__item contacts__item--min-mrgn" href="#" title="мы на Facebook">Facebook</a></li>
+              <li><a class="contacts__item contacts__item--min-mrgn" href="#" title="мы на LinkedIn">LinkedIn</a></li>
+              <li><a class="contacts__item contacts__item--min-mrgn" href="#" title="мы в Youtube">Youtube</a></li>
+            </ul>
           </div>
           <div class="copyright">
             <p>2019 © Afrianska. All rights reserved.</p>
@@ -277,6 +324,6 @@
     </div>
   </div>
 </section>
-    <script src="js/app.min.js?_v=20220421231131"></script>
+    <script src="js/app.min.js?_v=20220424125407"></script>
   </body>
 </html>

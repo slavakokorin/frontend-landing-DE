@@ -2,7 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 940px;
-    padding: 180px 0;
+    padding-top: 180px;
+    padding-bottom: 212px;
     background: #FFFFFF;
 
     @include tablet {
@@ -12,8 +13,9 @@
 
     &__title {
         position: relative;
-        top: 12px;
-        max-width: 358px;
+        left: -8px;
+        top: 10px;
+        max-width: 360px;
         color: var(--footer-color);
 
         @include tablet {
@@ -25,7 +27,7 @@
         font-size: 36px;
         font-weight: 600;
         line-height: 1.28em;
-        letter-spacing: 0.046em;
+        letter-spacing: 0.05em;
 
         color: var(--footer-color);
 

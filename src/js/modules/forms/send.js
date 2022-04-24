@@ -25,11 +25,14 @@ export default class FormSend {
   static onSuccess(json) {
     console.debug(json);
     Modals.closeLastModal();
+    document.body.classList.add('lock');
     const modal = document.querySelector('#send-success');
     modal.classList.add('active-modal');
   }
 
   static onError() {
+    Modals.closeLastModal();
+    document.body.classList.add('lock');
     const modal = document.querySelector('#send-error');
     modal.classList.add('active-modal');
   }

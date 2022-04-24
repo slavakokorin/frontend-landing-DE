@@ -24,12 +24,21 @@
       }
     }
 
+    // ul {
+    //   display: flex;
+    //   flex-direction: column;
+
+    //   li {
+    //     display: block;
+    //   }
+    // }
+
     &__item {
       display: flex;
-      margin-top: 24px;
+      padding-top: 24px;
     
       &--min-mrgn {
-        margin-top: 16px
+        padding-top: 16px
       }
     
       &--ltr-spacing-down {

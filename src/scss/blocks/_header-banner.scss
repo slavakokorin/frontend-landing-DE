@@ -26,7 +26,7 @@
     &__info {
         display: flex;
         max-width: 425px;
-        margin-top: 32px;
+        margin-top: 39px;
         font-weight: 400;
         letter-spacing: 0.05em;
         opacity: 0.7;
@@ -38,7 +38,8 @@
       
     &__btn {
         width: 220px;
-        margin-top: 71px;
+        margin-top: 77px;
+        letter-spacing: 0.04em;
 
         @include mobile-s {
             margin-top: 30px;
