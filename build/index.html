@@ -4,34 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20220424125407">
+  <link rel="stylesheet" href="css/style.min.css?_v=20220425090255">
   <title>homepage</title>
 </head>
   <body>
     <header class="header">
   <div class="header__top header__top--fixed">
-    <!-- <div class="header__top__content">
-      <div class="logo">
-        <a href="#" title="наша домашняя страница">
-          <div>
-            <img src="img/sprite-logo.svg" width="48" height="32" alt="logo">
-          </div>
-        </a>
-      </div>
-      <div class="menu">
-        <a href="#" class="menu__button">
-          <span class="menu__lines"></span>
-        </a>
-        <nav class="menu__nav">
-           <a href="#our-work-examples" class="menu__link" title="наша деятельность">OUR WORK</a>
-           <a href="#our-clients" class="menu__link" title="наши клиенты">OUR CLIENTS</a>
-           <a href="#lets-talk" class="menu__link" title="обратная связь">LETS TALK</a>
-           <a href="#our-contacts" class="menu__link" title="контакты">CONTACTS</a>
-        </nav>
-      </div>
-    </div>
-  </div> -->
-
 
   <div class="header__top__content">
     <div class="logo">
@@ -46,8 +24,6 @@
       <button type="button" class="burger__button">
         <span class="burger__lines"></span>
       </button>
-  
-
       <nav class="menu__nav">
         <ul>
           <li><a href="#our-work-examples" class="menu__link" title="наша деятельность">OUR WORK</a></li>
@@ -57,17 +33,8 @@
         </ul>
       </nav>
     </div>
-
-
-
   </div>
 </div>
-
-
-
-
-
-
 
   <div class="container container--relative">
     <section class="header__banner banner">
@@ -83,6 +50,7 @@
     </div>
   </div>
 </header>
+
    
     <main class="main">
   <div class="container container--centred">
@@ -189,7 +157,7 @@
         <img src="img/LOGO-CLIENT-7.svg" width="145" height="16" class="display-block" alt="client-logo-7">
       </div>
     </a>
-    <a class="clients__btn clients__logo_btn--last" href="#" title="смотреть сайты других клиентов">More Clients</a>
+    <a class="clients__btn clients__logo_btn--last" href="#" title="смотреть сайты других клиентов">More Client</a>
   </div>
 </section>
 
@@ -207,7 +175,9 @@
               <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span>
             </div>
           </div>
-          <button class="footer__button button open-feedback-form" data-js-modal-open-button='{"src": "#modal-feedback"}'>Let’s Talk</button>
+          <button type="button" class="footer__button button open-feedback-form" data-js-modal-open-button='{"src": "#modal-feedback"}'>
+            <span>Let&rsquo;s Talk</span>
+          </button>
         </div>
         <div class="footer__line"></div>
         <div id="our-contacts" class="footer__down">
@@ -216,34 +186,26 @@
             <ul>
               <li>
                 <a class="contacts__logo" href="#" title="наша домашняя страница">
-                  <div width="48" height="48">
-                    <img src="img/logo-light.svg" width="48" height="48" alt="logo">
-                  </div>
-                  <div class="contacts__logo__company-name"><p>Afrianska</p></div>
+                  <div class="padd-5" width="48" height="48"><img src="img/logo-light.svg" width="48" height="48" alt="logo"></div>
+                  <div class="contacts__logo__company-name"><span>Afrianska</span></div>
                 </a>
               </li>
               <li>
                 <div class="contacts__item">
-                  <div class="label">
-                    <p>A.</p>
-                  </div>
-                  <div class="about"><p>Lorem ipsum dolor sit amet,<br>consectetur adipisicing elit.</p></div>
+                  <div class="label"><span>A.</span></div>
+                  <div class="about"><span>Lorem ipsum dolor sit amet,<br>consectetur adipisicing elit.</span></div>
                 </div>
               </li>
               <li>
                 <div class="contacts__item">
-                  <div class="label">
-                    <p>T.</p>
-                  </div>
+                  <div class="label"><span>T.</span></div>
                   <div class="phone"><a rel="contact" href="tel:">+62-812-7313-4321</a></div>
                 </div>
               </li>
               <li>
                 <div class="contacts__item">
-                  <div class="label"><p>E</p></div>
-                  <div class="email">
-                    <a rel="contact" href="hello.afrian@gmail.com">hello.afrian@gmail.com</a>
-                  </div>
+                  <div class="label padd-5"><span>E</span></div>
+                  <div class="email padd-5"><a rel="contact" href="hello.afrian@gmail.com">hello.afrian@gmail.com</a></div>
                 </div>
               </li>
             </ul>
@@ -324,6 +286,6 @@
     </div>
   </div>
 </section>
-    <script src="js/app.min.js?_v=20220424125407"></script>
+    <script src="js/app.min.js?_v=20220425090255"></script>
   </body>
 </html>

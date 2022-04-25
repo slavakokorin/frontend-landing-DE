@@ -32,7 +32,7 @@ footer {
     flex-direction: column;
     max-width: 480px;
     margin-top: 91px;
-    padding-left: 28px;
+    padding-left: 36px;
       
     @include tablet {
       margin: 20px 20px 20px 0;
@@ -71,11 +71,15 @@ footer {
   }
 
   &__button {
-    margin: 165px 20px 0 180px;
+    margin: 165px 20px 0 195px;
     max-height: 56px;
     width: 220px;
 
     font-size: 16px;
+
+    span {
+      letter-spacing: 0.05em;
+    }
 
     @include tablet {
       margin: 20px 20px 0 280px;
@@ -106,7 +110,7 @@ footer {
     flex-direction: row;
     max-width: 940px;
     flex-wrap: wrap;
-    margin: 96px auto 0 auto;
+    margin: 94px auto 0 auto;
 
     @include tablet {
       margin: 0;
@@ -118,14 +122,15 @@ footer {
     display: flex;
     flex-direction: column;
     max-width: 163px;
-    margin-left: 100px;
+    margin-left: 142px;
       
     &__title {
       font-size: 20px;
       line-height: 1.5em;
       font-weight: 500;
       letter-spacing: 0.05em;
-      padding-bottom: 16px;
+      padding-top: 3px;
+      padding-bottom: 17px;
     }
 
     @include tablet {
@@ -146,7 +151,8 @@ footer {
       font-weight: 500;
       line-height: 1.5em;
       letter-spacing: 0.05em;
-      padding-bottom: 16px;
+      padding-top: 3px;
+      padding-bottom: 17px;
     }
 
     @include tablet {

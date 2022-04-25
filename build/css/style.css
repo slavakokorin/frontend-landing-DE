@@ -194,27 +194,27 @@ body {
 }
 
 .infocard--first {
-  margin: 158px 0 0 80px;
+  margin: 170px 0 0 78px;
 }
 
 .infocard--second {
-  margin-top: 12px;
+  margin-top: 13px;
 }
 
 .infocard--third {
-  margin-top: 100px;
+  margin-top: 99px;
 }
 
 .infocard__image--first {
-  margin: 48px 0 0 26px;
+  margin: 48px 0 0 23px;
 }
 
 .infocard__image--second {
-  margin: -18px 0 0 30px;
+  margin: -18px 0 0 25px;
 }
 
 .infocard__image--third {
-  margin: 49px 0 0 37px;
+  margin: 51px 0 0 38px;
 }
 
 .display-block {
@@ -370,10 +370,10 @@ body {
 }
 
 .header__banner {
-  margin-top: 92px;
+  margin-top: 91px;
   margin-left: 192px;
   margin-bottom: 190px;
-  max-width: 510px;
+  max-width: 521px;
   z-index: 1;
 }
 
@@ -397,10 +397,13 @@ body {
 
 .banner__title {
   font-family: Galien, Arial, Helvetica, sans-serif;
-  font-weight: 700;
   font-size: 64px;
   line-height: 1.16em;
-  letter-spacing: 0.038em;
+  letter-spacing: 0.041em;
+}
+
+.banner__title h1 {
+  font-weight: 700;
 }
 
 .banner__info {
@@ -435,13 +438,13 @@ body {
   flex-wrap: wrap;
   max-width: 940px;
   padding-top: 180px;
-  padding-bottom: 212px;
+  padding-bottom: 213px;
   background: #FFFFFF;
 }
 
 .our-work__title {
   position: relative;
-  left: -8px;
+  left: -1px;
   top: 10px;
   max-width: 360px;
   color: var(--footer-color);
@@ -462,7 +465,7 @@ body {
 }
 
 .our-work__column--second {
-  padding-left: 85px;
+  padding-left: 100px;
 }
 
 .infocard {
@@ -486,21 +489,21 @@ body {
   font-family: Gilroy, Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 600;
-  line-height: 1.5em;
+  line-height: 1.44em;
   color: var(--blue);
-  letter-spacing: 0.048em;
+  letter-spacing: 0.05em;
 }
 
 .infocard__content__text {
   margin-top: 16px;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   opacity: 0.6;
 }
 
 .infocard__content__btn {
-  margin-top: 32px;
-  width: 127px;
+  margin-top: 34px;
+  width: 124px;
   height: 30px;
   display: flex;
   justify-content: space-between;
@@ -517,7 +520,7 @@ body {
 
 .clients {
   margin: 0px auto;
-  padding: 85px 0 125px 0;
+  padding: 95px 0 125px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -528,13 +531,13 @@ body {
 
 .clients__banner {
   display: flex;
-  max-width: 940px;
+  max-width: 950px;
 }
 
 .clients__banner-title {
   display: flex;
   flex-wrap: wrap;
-  max-width: 223px;
+  max-width: 230px;
 }
 
 .clients__banner-title h2 {
@@ -542,14 +545,15 @@ body {
   font-size: 36px;
   font-weight: 500;
   line-height: 1.28em;
-  letter-spacing: 0.041em;
+  letter-spacing: 0.043em;
   color: var(--btn-txt-color);
 }
 
 .clients__banner-text {
   display: flex;
   max-width: 540px;
-  margin: 0 80px 0 97px;
+  margin: 0 80px 0 86px;
+  letter-spacing: 0.045em;
   color: var(--btn-txt-color);
   opacity: 0.6;
 }
@@ -559,7 +563,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   max-width: 940px;
-  margin-top: 123px;
+  margin-top: 110px;
 }
 
 .clients__btn {
@@ -621,7 +625,7 @@ footer {
   flex-direction: column;
   max-width: 480px;
   margin-top: 91px;
-  padding-left: 28px;
+  padding-left: 36px;
 }
 
 .footer__banner__title {
@@ -645,10 +649,14 @@ footer {
 }
 
 .footer__button {
-  margin: 165px 20px 0 180px;
+  margin: 165px 20px 0 195px;
   max-height: 56px;
   width: 220px;
   font-size: 16px;
+}
+
+.footer__button span {
+  letter-spacing: 0.05em;
 }
 
 .footer__line {
@@ -663,14 +671,14 @@ footer {
   flex-direction: row;
   max-width: 940px;
   flex-wrap: wrap;
-  margin: 96px auto 0 auto;
+  margin: 94px auto 0 auto;
 }
 
 .footer__info {
   display: flex;
   flex-direction: column;
   max-width: 163px;
-  margin-left: 100px;
+  margin-left: 142px;
 }
 
 .footer__info__title {
@@ -678,7 +686,8 @@ footer {
   line-height: 1.5em;
   font-weight: 500;
   letter-spacing: 0.05em;
-  padding-bottom: 16px;
+  padding-top: 3px;
+  padding-bottom: 17px;
 }
 
 .footer__social {
@@ -693,7 +702,8 @@ footer {
   font-weight: 500;
   line-height: 1.5em;
   letter-spacing: 0.05em;
-  padding-bottom: 16px;
+  padding-top: 3px;
+  padding-bottom: 17px;
 }
 
 .label {
@@ -731,12 +741,13 @@ footer {
   display: flex;
   flex-direction: column;
   max-width: 299px;
-  margin-left: 48px;
+  margin-left: 49px;
 }
 
 .contacts__logo {
   display: flex;
   align-items: center;
+  padding-bottom: 16px;
   transition: transform 0.5s;
 }
 
@@ -755,7 +766,8 @@ footer {
 
 .contacts__item {
   display: flex;
-  padding-top: 24px;
+  padding-top: 18px;
+  letter-spacing: 0.04em;
 }
 
 .contacts__item--min-mrgn {
@@ -764,6 +776,10 @@ footer {
 
 .contacts__item--ltr-spacing-down {
   letter-spacing: 0.04em;
+}
+
+.padd-5 {
+  padding-top: 5px;
 }
 
 .feedback-form__header {

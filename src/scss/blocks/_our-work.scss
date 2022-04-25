@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     max-width: 940px;
     padding-top: 180px;
-    padding-bottom: 212px;
+    padding-bottom: 213px;
     background: #FFFFFF;
 
     @include tablet {
@@ -13,7 +13,7 @@
 
     &__title {
         position: relative;
-        left: -8px;
+        left: -1px;
         top: 10px;
         max-width: 360px;
         color: var(--footer-color);
@@ -48,7 +48,7 @@
     }
 
     &__column--second {
-        padding-left: 85px;
+        padding-left: 100px;
 
         @include tablet {
           padding: 0;

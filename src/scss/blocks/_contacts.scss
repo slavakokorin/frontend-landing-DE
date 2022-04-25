@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: column;
     max-width: 299px;
-    margin-left: 48px;
+    margin-left: 49px;
   
     &__logo {
       display: flex;
       align-items: center;
+      padding-bottom: 16px;
       transition: transform 0.5s;
 
       &:hover {
@@ -24,18 +25,10 @@
       }
     }
 
-    // ul {
-    //   display: flex;
-    //   flex-direction: column;
-
-    //   li {
-    //     display: block;
-    //   }
-    // }
-
     &__item {
       display: flex;
-      padding-top: 24px;
+      padding-top: 18px;
+      letter-spacing: 0.04em;
     
       &--min-mrgn {
         padding-top: 16px
@@ -52,4 +45,7 @@
       padding: 20px;
     }
   }
-  
+
+.padd-5 {
+  padding-top: 5px;
+}

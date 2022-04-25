@@ -1,6 +1,6 @@
 .clients {
     margin: 0px auto;
-    padding: 85px 0 125px 0;
+    padding: 95px 0 125px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +16,7 @@
     
     &__banner {
         display: flex;
-        max-width: 940px;
+        max-width: 950px;
 
         @include tablet {
             margin-left: 20px;
@@ -30,7 +30,7 @@
         &-title {
             display: flex;
             flex-wrap: wrap;
-            max-width: 223px;
+            max-width: 230px;
 
             @include mobile {
                 max-width: 300px;
@@ -43,7 +43,7 @@
                 font-size: 36px;
                 font-weight: 500;
                 line-height: 1.28em;
-                letter-spacing: 0.041em;
+                letter-spacing: 0.043em;
 
                 color: var(--btn-txt-color);
 
@@ -56,7 +56,8 @@
         &-text {
             display: flex;
             max-width: 540px;
-            margin: 0 80px 0 97px;
+            margin: 0 80px 0 86px;
+            letter-spacing: 0.045em;
 
             color: var(--btn-txt-color);
             opacity: 0.6;
@@ -76,7 +77,7 @@
         justify-content: center;
         flex-wrap: wrap;
         max-width: 940px;
-        margin-top: 123px;
+        margin-top: 110px;
 
         @include tablet {
             margin: 0;

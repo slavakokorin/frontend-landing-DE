@@ -2,47 +2,49 @@
   display: flex;
   flex-direction: column;
     
-    &__title {
-        font-family: Galien, Arial, Helvetica, sans-serif;
-        font-weight: 700;
-        font-size: 64px;
-        line-height: 1.16em;
-        letter-spacing: 0.038em;
+  &__title {
+    font-family: Galien, Arial, Helvetica, sans-serif;
+    font-size: 64px;
+    line-height: 1.16em;
+    letter-spacing: 0.041em;
 
-
-        @include tablet {
-            font-size: 54px;
-        }
-
-        @include mobile {
-            font-size: 44px;
-        }
-
-        @include mobile-s {
-            font-size: 30px;
-        }
+    h1 {
+      font-weight: 700;
     }
+
+    @include tablet {
+      font-size: 54px;
+    }
+
+    @include mobile {
+      font-size: 44px;
+    }
+
+    @include mobile-s {
+      font-size: 30px;
+    }
+  }
       
-    &__info {
-        display: flex;
-        max-width: 425px;
-        margin-top: 39px;
-        font-weight: 400;
-        letter-spacing: 0.05em;
-        opacity: 0.7;
+  &__info {
+    display: flex;
+    max-width: 425px;
+    margin-top: 39px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
 
-        @include tablet-xl {
-            opacity: 1;
-        }
+    @include tablet-xl {
+      opacity: 1;
     }
+  }
       
-    &__btn {
-        width: 220px;
-        margin-top: 77px;
-        letter-spacing: 0.04em;
+  &__btn {
+    width: 220px;
+    margin-top: 77px;
+    letter-spacing: 0.04em;
 
-        @include mobile-s {
-            margin-top: 30px;
-        }
+    @include mobile-s {
+      margin-top: 30px;
     }
+  }
 }

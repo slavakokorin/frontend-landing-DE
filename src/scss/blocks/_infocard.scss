@@ -28,23 +28,23 @@
       font-family: Gilroy, Arial, Helvetica, sans-serif;
       font-size: 20px;
       font-weight: 600;
-      line-height: 1.5em;
+      line-height: 1.44em;
       
       color: var(--blue);
 
-      letter-spacing: 0.048em;
+      letter-spacing: 0.05em;
     }
 
     &__text {
       margin-top: 16px;
       font-weight: 400;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       opacity: 0.6;
     }
     
     &__btn {
-      margin-top: 32px;
-      width: 127px;
+      margin-top: 34px;
+      width: 124px;
       height: 30px;
       display: flex;
       justify-content: space-between;
