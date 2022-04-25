@@ -1,58 +1,58 @@
 .contacts {
-    display: flex;
-    flex-direction: column;
-    max-width: 299px;
-    margin-left: 49px;
+  display: flex;
+  flex-direction: column;
+  max-width: 299px;
+  margin-left: 49px;
   
-    &__logo {
-      display: flex;
-      align-items: center;
-      padding-bottom: 16px;
+  &__logo {
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
       transition: transform 0.5s;
-
-      &:hover {
-        transform: scale(1.1);
-        transition: transform 0.5s;
-      }
+    }
     
-      &__company-name {
-        margin-left: 15px;
+    &__company-name {
+      margin-left: 15px;
         
-        font-size: 28px;
-        font-weight: 500;
-        line-height: 1.64em;
-        letter-spacing: 0.02em;
-      }
-    }
-
-    &__item {
-      display: flex;
-      padding-top: 18px;
-      letter-spacing: 0.04em;
-    
-      &--min-padd {
-        padding-top: 16px
-      }
-
-      &--max-padd {
-        padding-top: 20px;
-      }
-    
-      &--ltr-spacing-down {
-        letter-spacing: 0.04em;
-      }
-
-      &--ltr-spacing-down-3 {
-        letter-spacing: 0.033em;
-      }
-    }
-
-    @include tablet {
-      max-width: 339px;
-      margin: 0;
-      padding: 20px;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 1.64em;
+      letter-spacing: 0.02em;
     }
   }
+
+  &__item {
+    display: flex;
+    padding-top: 18px;
+    letter-spacing: 0.04em;
+    
+    &--min-padd {
+      padding-top: 16px
+    }
+
+    &--max-padd {
+      padding-top: 20px;
+    }
+    
+    &--ltr-spacing-down {
+      letter-spacing: 0.04em;
+    }
+
+    &--ltr-spacing-down-3 {
+      letter-spacing: 0.033em;
+    }
+  }
+
+  @include tablet {
+    max-width: 339px;
+    margin: 0;
+    padding: 20px;
+  }
+}
 
 .padd-5 {
   padding-top: 5px;

@@ -172,7 +172,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 1000px;
+  border-radius: 5px;
   background-color: var(--menu-color);
   border: 2px solid var(--main-bg-color);
 }
@@ -192,6 +192,10 @@ body {
   display: none;
 }
 
+.display-block {
+  display: block;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -207,10 +211,6 @@ body {
 
 .container--centred {
   justify-content: center;
-}
-
-.display-block {
-  display: block;
 }
 
 .menu {
@@ -587,7 +587,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-basis: 235px;
-  padding: 56px 41px 56px 44px;
+  padding: 56px 44px;
   font-family: Gilroy, Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 500;

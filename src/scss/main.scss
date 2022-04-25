@@ -11,7 +11,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 1000px;
+  border-radius: 5px;
   background-color: var(--menu-color);
   border: 2px solid var(--main-bg-color);
 }
@@ -31,23 +31,6 @@ body {
 
 .display-none {
   display: none;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1406px;
-  margin: 0px auto;
-  padding: 0 20px 0 20px;
-}
-
-.container--relative {
-  position: relative;
-  padding-top: 88px;
-}
-
-.container--centred {
-  justify-content: center;
 }
 
 .display-block {

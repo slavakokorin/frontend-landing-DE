@@ -1,57 +1,57 @@
 .our-work {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 940px;
-    padding-top: 180px;
-    padding-bottom: 213px;
-    background: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 940px;
+  padding-top: 180px;
+  padding-bottom: 213px;
+  background: #FFFFFF;
+
+  @include tablet {
+    padding: 40px 0;
+    justify-content: center;
+  }
+
+  &__title {
+    position: relative;
+    left: -1px;
+    top: 10px;
+    max-width: 360px;
+    color: var(--footer-color);
 
     @include tablet {
-        padding: 40px 0;
-        justify-content: center;
+      max-width: 400px;
+      left: 15px;
     }
 
-    &__title {
-        position: relative;
-        left: -1px;
-        top: 10px;
-        max-width: 360px;
-        color: var(--footer-color);
+    h2 {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1.28em;
+      letter-spacing: 0.05em;
 
-        @include tablet {
-            max-width: 400px;
-            left: 15px;
-          }
+      color: var(--footer-color);
 
-        h2 {
-        font-size: 36px;
-        font-weight: 600;
-        line-height: 1.28em;
-        letter-spacing: 0.05em;
+      @include tablet {
+        font-size: 30px;
+      }
 
-        color: var(--footer-color);
-
-          @include tablet {
-            font-size: 30px;
-          }
-
-          @include mobile-s {
-            font-size: 25px;
-          }
-        }
+      @include mobile-s {
+        font-size: 25px;
+      }
     }
+  }
 
-    &__column--first,
-    &__column--second {
-        display: flex;
-        flex-direction: column;
+  &__column--first,
+  &__column--second {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__column--second {
+    padding-left: 100px;
+
+    @include tablet {
+      padding: 0;
     }
-
-    &__column--second {
-        padding-left: 100px;
-
-        @include tablet {
-          padding: 0;
-        }
-    }
+  }
 }
