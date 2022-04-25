@@ -1,3 +1,21 @@
+html {
+  scrollbar-color:
+    var(--menu-color)
+    var(--main-bg-color);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--main-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1000px;
+  background-color: var(--menu-color);
+  border: 2px solid var(--main-bg-color);
+}
+
 body {
   height: 100%;
 
@@ -32,81 +50,6 @@ body {
   justify-content: center;
 }
 
-.infocard--first {
-  margin: 170px 0 0 78px;
-
-  @include tablet {
-    margin: 40px auto 0 auto;
-  }
-}
-
-.infocard--second {
-  margin-top: 13px;
-
-  @include tablet {
-    margin-top: 60px;
-  }
-}
-
-.infocard--third {
-  margin-top: 99px;
-
-  @include tablet {
-    margin-top: 50px;
-  }
-}
-
-.infocard__image--first {
-  margin: 48px 0 0 23px;
-
-  @include mobile-s {
-    margin: 20px 0 0 26px;
-  }
-}
-
-.infocard__image--second {
-  margin: -18px 0 0 25px;
-}
-
-.infocard__image--third {
-  margin: 51px 0 0 38px;
-
-  @include mobile-s {
-    margin: 20px 0 0 37px;
-  }
-}
-
 .display-block {
   display: block;
 }
-
-
-// html {
-//   --background: hsl(210deg, 15%, 6.25%);
-//   --text: hsl(210deg, 10%, 90%);
-//   --gray-300: hsl(210deg, 10%, 40%);
-//   --gray-500: hsl(210deg, 8%, 50%);
-
-//   /* Official styles (Firefox) */
-//   scrollbar-color:
-//     var(--gray-300)
-//     var(--background);
-//   scrollbar-width: thin;
-// }
-
-// ::-webkit-scrollbar {
-//   width: 10px;
-//   background-color: var(--background);
-// }
-// ::-webkit-scrollbar-thumb {
-//   border-radius: 1000px;
-//   background-color: var(--gray-300);
-//   border: 2px solid var(--background);
-// }
-// /*
-//   Little bonus: on non-Firefox browsers,
-//   the thumb will light up on hover!
-// */
-// ::-webkit-scrollbar-thumb:hover {
-//   background-color: var(--gray-500);
-// }

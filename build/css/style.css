@@ -161,6 +161,22 @@ h6 {
   --footer-color: #316099;
 }
 
+html {
+  scrollbar-color: var(--menu-color) var(--main-bg-color);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--main-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1000px;
+  background-color: var(--menu-color);
+  border: 2px solid var(--main-bg-color);
+}
+
 body {
   height: 100%;
   line-height: 1.62em;
@@ -191,30 +207,6 @@ body {
 
 .container--centred {
   justify-content: center;
-}
-
-.infocard--first {
-  margin: 170px 0 0 78px;
-}
-
-.infocard--second {
-  margin-top: 13px;
-}
-
-.infocard--third {
-  margin-top: 99px;
-}
-
-.infocard__image--first {
-  margin: 48px 0 0 23px;
-}
-
-.infocard__image--second {
-  margin: -18px 0 0 25px;
-}
-
-.infocard__image--third {
-  margin: 51px 0 0 38px;
 }
 
 .display-block {
@@ -516,6 +508,30 @@ body {
   line-height: 2.14em;
   letter-spacing: 0.05em;
   color: var(--light-blue);
+}
+
+.infocard--first {
+  margin: 170px 0 0 78px;
+}
+
+.infocard--second {
+  margin-top: 13px;
+}
+
+.infocard--third {
+  margin-top: 99px;
+}
+
+.infocard__image--first {
+  margin: 48px 0 0 23px;
+}
+
+.infocard__image--second {
+  margin: -18px 0 0 25px;
+}
+
+.infocard__image--third {
+  margin: 51px 0 0 38px;
 }
 
 .clients {
@@ -951,18 +967,6 @@ textarea {
 }
 
 @media (max-width: 1024px) {
-  .infocard--first {
-    margin: 40px auto 0 auto;
-  }
-
-  .infocard--second {
-    margin-top: 60px;
-  }
-
-  .infocard--third {
-    margin-top: 50px;
-  }
-
   .menu__link {
     font-size: 18px;
   }
@@ -1005,6 +1009,18 @@ textarea {
 
   .our-work__column--second {
     padding: 0;
+  }
+
+  .infocard--first {
+    margin: 40px auto 0 auto;
+  }
+
+  .infocard--second {
+    margin-top: 60px;
+  }
+
+  .infocard--third {
+    margin-top: 50px;
   }
 
   .clients {
@@ -1210,14 +1226,6 @@ textarea {
 }
 
 @media (max-width: 400px) {
-  .infocard__image--first {
-    margin: 20px 0 0 26px;
-  }
-
-  .infocard__image--third {
-    margin: 20px 0 0 37px;
-  }
-
   .banner__title {
     font-size: 30px;
   }
@@ -1236,6 +1244,14 @@ textarea {
 
   .infocard__content__btn {
     margin-top: 20px;
+  }
+
+  .infocard__image--first {
+    margin: 20px 0 0 26px;
+  }
+
+  .infocard__image--third {
+    margin: 20px 0 0 37px;
   }
 
   .footer__button {

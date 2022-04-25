@@ -64,4 +64,48 @@
       }
     }
   }
+
+  &--first {
+    margin: 170px 0 0 78px;
+  
+    @include tablet {
+      margin: 40px auto 0 auto;
+    }
+  }
+  
+  &--second {
+    margin-top: 13px;
+  
+    @include tablet {
+      margin-top: 60px;
+    }
+  }
+  
+  &--third {
+    margin-top: 99px;
+  
+    @include tablet {
+      margin-top: 50px;
+    }
+  }
+  
+  &__image--first {
+    margin: 48px 0 0 23px;
+  
+    @include mobile-s {
+      margin: 20px 0 0 26px;
+    }
+  }
+  
+  &__image--second {
+    margin: -18px 0 0 25px;
+  }
+  
+  &__image--third {
+    margin: 51px 0 0 38px;
+  
+    @include mobile-s {
+      margin: 20px 0 0 37px;
+    }
+  }
 }
