@@ -1,4 +1,5 @@
 import webpack from "webpack-stream";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export const js = () => {
   return app.gulp.src(app.path.src.js, { sourcemaps: app.isDev })
@@ -8,12 +9,29 @@ export const js = () => {
         message: "Error: <%= error.message %>"
       })
     ))
-    .pipe(webpack({
-      mode: app.isBuild ? 'production' : 'development',
-      output: {
-        filename: 'app.min.js',
-      }
-    }))
-    .pipe(app.gulp.dest(app.path.build.js))
+    // .pipe(
+    //   webpack({
+    //     mode: app.isBuild ? 'production' : 'development',
+    //     output: {
+    //       filename: 'app.min.js',
+    //     },
+    //   })
+    // )
+    // .pipe(app.gulp.dest(app.path.build.js))
+    .pipe(
+      webpack({
+        mode: app.isBuild ? 'production' : 'development',
+        output: {
+          filename: 'js/app.min.js',
+        },
+        plugins: [
+          new HtmlWebpackPlugin({
+            inject: 'body',
+            template: '/home/slav/de-landingpage/build/index.html',
+          })
+        ],
+      })
+    )
+    .pipe(app.gulp.dest(app.path.build.html))
     .pipe(app.plugins.browsersync.stream());
-}
+};
