@@ -30,12 +30,20 @@
       padding-top: 18px;
       letter-spacing: 0.04em;
     
-      &--min-mrgn {
+      &--min-padd {
         padding-top: 16px
+      }
+
+      &--max-padd {
+        padding-top: 20px;
       }
     
       &--ltr-spacing-down {
         letter-spacing: 0.04em;
+      }
+
+      &--ltr-spacing-down-3 {
+        letter-spacing: 0.033em;
       }
     }
 

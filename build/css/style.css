@@ -587,7 +587,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-basis: 235px;
-  padding: 56px 44px;
+  padding: 56px 41px 56px 44px;
   font-family: Gilroy, Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 500;
@@ -660,7 +660,7 @@ footer {
 .footer__banner__text {
   display: flex;
   max-width: 460px;
-  margin-top: 32px;
+  margin-top: 33px;
   opacity: 0.5;
 }
 
@@ -669,9 +669,6 @@ footer {
   max-height: 56px;
   width: 220px;
   font-size: 16px;
-}
-
-.footer__button span {
   letter-spacing: 0.05em;
 }
 
@@ -786,12 +783,20 @@ footer {
   letter-spacing: 0.04em;
 }
 
-.contacts__item--min-mrgn {
+.contacts__item--min-padd {
   padding-top: 16px;
+}
+
+.contacts__item--max-padd {
+  padding-top: 20px;
 }
 
 .contacts__item--ltr-spacing-down {
   letter-spacing: 0.04em;
+}
+
+.contacts__item--ltr-spacing-down-3 {
+  letter-spacing: 0.033em;
 }
 
 .padd-5 {
