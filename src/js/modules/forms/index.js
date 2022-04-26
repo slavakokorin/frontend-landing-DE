@@ -13,7 +13,7 @@ export default class Forms {
 
   constructor() {
     this.bindEvents();
-  }
+  };
 
   handleSubmit(e) {
     //const target = e.target;
@@ -29,11 +29,11 @@ export default class Forms {
         target.reset();
       }
     }
-  }
+  };
 
   bindEvents() {
     document.addEventListener("submit", (e) => {
       this.handleSubmit(e);
-    });
-  }
+    })
+  };
 }

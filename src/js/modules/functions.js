@@ -31,33 +31,6 @@ export const getAttr = (selector) => {
   return selector.substring(1, selector.length - 1)
 };
 
-// export function throttle(func, ms) {
-//   let isThrottled = false;
-//   let savedArgs;
-//   let contecst;
-  
-//   function wrapper() {
-//     if (isThrottled) {
-//       savedArgs = arguments;
-//       contecst = this;
-//       return;
-//     }
-
-//     func.apply(this, arguments);
-//     isThrottled = true;
-
-//     setTimeout(function() {
-//       isThrottled = false;
-//       if(savedArgs) {
-//         wrapper.apply(contecst, savedArgs);
-//         savedArgs = contecst = null;
-//       }
-//     }, ms)
-//   }
-//   return wrapper;
-// };
-
-
 export const throttle = (func, ms) => {
 
   let isLocked = false;
@@ -75,6 +48,5 @@ export const throttle = (func, ms) => {
       func.apply(context, args);
       isLocked = false;
     }, ms)
-    
   }
 };
