@@ -1,5 +1,7 @@
 import webpack from "webpack-stream";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+// import * as nodePath from 'path';
+// const rootFolder = nodePath.basename(nodePath.resolve());
 
 export const js = () => {
   return app.gulp.src(app.path.src.js, { sourcemaps: app.isDev })
@@ -27,7 +29,7 @@ export const js = () => {
         plugins: [
           new HtmlWebpackPlugin({
             inject: 'body',
-            template: '/home/slav/de-landingpage/build/index.html',
+            template: 'build/index.html',
           })
         ],
       })

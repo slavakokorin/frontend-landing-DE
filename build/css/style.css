@@ -349,7 +349,7 @@ body {
   z-index: 2;
 }
 
-.header__top--min {
+.header__top--is-scrolled {
   padding-top: 10px;
 }
 
