@@ -23,12 +23,10 @@ export default class FormSend {
   }
 
   static onSuccess(json) {
-    // console.debug(json);
+    console.debug(json);
     Modals.closeLastModal();
     document.body.classList.add('lock');
-    // const modalElement = document.querySelector('#send-success');
     const modalElement = document.querySelector('[data-js-modal="send-sucess"]');
-    console.debug(modalElement);
     modalElement.classList.add('active-modal');
   }
 

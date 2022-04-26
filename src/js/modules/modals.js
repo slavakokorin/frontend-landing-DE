@@ -6,6 +6,9 @@ export const els = {
   closeButton: "[data-js-modal-close-button]",
 }
 
+const body = document.body;
+const menu = document.querySelector('[data-js-header-top]');
+
 export default class Modals {
   constructor() {
     this.bindEvents();
@@ -24,24 +27,30 @@ export default class Modals {
     }
 
     const modalElement = document.querySelector(src);
+
     if (!modalElement) {
       console.debug("Modal element by `${src}` selector is not found");
       return;
     }
     
     modalElement.classList.add('active-modal');
-    document.body.classList.add('lock');
+    menu.classList.remove('header__top--fixed');
+    body.classList.add('compensation-padd');
+    body.classList.add('lock');
   }
 
   static closeLastModal() {
     const allOpenedModals = document.querySelectorAll('.active-modal')
     const lastModal = [...allOpenedModals].at(-1)
+
     if (!lastModal) {
       return;
     }
 
     lastModal.classList.remove('active-modal');
-    document.body.classList.remove('lock');
+    body.classList.remove('compensation-padd');
+    menu.classList.add('header__top--fixed');
+    body.classList.remove('lock');
   }
 
   handleCloseButtonClick(event) {
@@ -75,7 +84,7 @@ export default class Modals {
     })
 
     document.addEventListener('keydown', (event) => {
-      if(event.key === 'Escape') {
+      if (event.key === 'Escape') {
         event.preventDefault();
         Modals.closeLastModal();
       }

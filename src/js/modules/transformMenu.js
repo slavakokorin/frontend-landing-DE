@@ -1,7 +1,7 @@
 import { throttle } from "./functions.js";
 
-const headerTop = document.querySelector('[data-js-header-top="fixed"]');
-const menuButton = document.querySelector('[data-js-menu-button="display-menu"]');
+const headerTop = document.querySelector('[data-js-header-top]');
+const menuButton = document.querySelector('[data-js-menu-button]');
 
 const transformation = () => {
   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;

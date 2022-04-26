@@ -1,6 +1,6 @@
 export function displayMenu() {
-  const menu = document.querySelector('[data-js-menu="list"]');
-  const button = document.querySelector('[data-js-menu-button="display-menu"]');
+  const menu = document.querySelector('[data-js-menu]');
+  const button = document.querySelector('[data-js-menu-button]');
 
   button.addEventListener('click', (e) => {
     e.preventDefault();

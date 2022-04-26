@@ -196,6 +196,10 @@ body {
   display: block;
 }
 
+.compensation-padd {
+  padding-right: 10px;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -211,6 +215,10 @@ body {
 
 .container--centred {
   justify-content: center;
+}
+
+.compensation-padd .container--relative {
+  padding-top: 36px;
 }
 
 .menu {
@@ -673,8 +681,8 @@ footer {
 }
 
 .footer__line {
-  width: 80%;
-  margin-top: 96px;
+  width: 84.5%;
+  margin-top: 98px;
   border-bottom: 1px solid #FFFFFF;
   opacity: 0.4;
 }
@@ -684,7 +692,7 @@ footer {
   flex-direction: row;
   max-width: 940px;
   flex-wrap: wrap;
-  margin: 94px auto 0 auto;
+  margin: 92px auto 0 auto;
 }
 
 .footer__info {
@@ -737,6 +745,7 @@ footer {
   flex: 0 1 1270px;
   margin: 64px 0 64px 48px;
   opacity: 0.4;
+  letter-spacing: 0.04em;
 }
 
 .ltrr-spacing-down-46 {
