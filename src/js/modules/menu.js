@@ -1,24 +1,3 @@
-// export function displayMenu() {
-//   const menu = document.querySelector('[data-js-menu]');
-//   const button = document.querySelector('[data-js-menu-button]');
-
-//   button.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     toggleMenu();
-//   });
-
-//   function toggleMenu() {
-//     if (menu.classList.contains('menu--active')) {
-//       menu.classList.remove('menu--active');
-//     } else {
-//       menu.classList.add('menu--active');
-//     }
-//   }
-// }
-
-
-
-
 import { scrollPosition, throttle } from "./functions.js";
 
 const menuElements = {
@@ -34,11 +13,12 @@ export default class Menu {
 
   toggleMenu() {
     const menu = document.querySelector(menuElements.menu);
+    const ACTIVE_SELECTOR = 'menu--active';
 
-    if (menu.classList.contains('menu--active')) {
-      menu.classList.remove('menu--active');
+    if (menu.classList.contains(ACTIVE_SELECTOR)) {
+      menu.classList.remove(ACTIVE_SELECTOR);
     } else {
-      menu.classList.add('menu--active');
+      menu.classList.add(ACTIVE_SELECTOR);
     }
   }
 

@@ -91,18 +91,36 @@
   
   &__image--first {
     margin: 48px 0 0 23px;
+    transform: scale(0);
+    transition: all 0.5s ease 0s;
   
     @include mobile-s {
       margin: 20px 0 0 26px;
+    }
+
+    &._active {
+      transform: scale(1);
     }
   }
   
   &__image--second {
     margin: -18px 0 0 25px;
+    transform: scale(0);
+    transition: all 0.5s ease 0s;
+
+    &._active {
+      transform: scale(1);
+    }
   }
   
   &__image--third {
     margin: 51px 0 0 38px;
+    transform: scale(0);
+    transition: all 0.5s ease 0s;
+
+    &._active {
+      transform: scale(1);
+    }
   
     @include mobile-s {
       margin: 20px 0 0 37px;

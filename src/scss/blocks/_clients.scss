@@ -32,6 +32,10 @@
       flex-wrap: wrap;
       max-width: 230px;
 
+      transform: translate(0, 60%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+
       @include mobile {
         max-width: 300px;
         padding-bottom: 20px;
@@ -50,6 +54,11 @@
         @include tablet {
           font-size: 26px;
         }
+      }
+
+      &._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
       }
     }
 

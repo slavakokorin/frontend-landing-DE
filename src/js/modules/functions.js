@@ -51,3 +51,9 @@ export const throttle = (func, ms) => {
 };
 
 export const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+
+export const offset = (el) => {
+  const rect = el.getBoundingClientRect(),
+  scrollTop = scrollPosition();
+  return { top: rect.top + scrollTop};
+}

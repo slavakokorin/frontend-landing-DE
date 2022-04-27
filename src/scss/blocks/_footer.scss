@@ -41,6 +41,10 @@ footer {
     &__title {
       display: flex;
        max-width: 317px;
+
+      transform: translate(0, 60%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
     
       h2 {
         display: flex;
@@ -54,6 +58,11 @@ footer {
           font-size: 25px;
           padding-left: 20px;
         }
+      }
+    
+      &._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
       }
     }
     

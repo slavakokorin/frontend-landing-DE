@@ -8,6 +8,10 @@
     line-height: 1.16em;
     letter-spacing: 0.041em;
 
+    // transform: translate(0, 60%);
+    // opacity: 0;
+    // transition: all 0.8s ease 0s;
+
     h1 {
       font-weight: 700;
     }
@@ -23,6 +27,11 @@
     @include mobile-s {
       font-size: 30px;
     }
+
+    // &._active {
+    //   transform: translate(0px, 0px);
+    //   opacity: 1;
+    // }
   }
       
   &__info {
@@ -42,6 +51,15 @@
     width: 220px;
     margin-top: 77px;
     letter-spacing: 0.04em;
+
+    transform: translate(0, 60%);
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+
+    &._active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
 
     @include mobile-s {
       margin-top: 30px;
