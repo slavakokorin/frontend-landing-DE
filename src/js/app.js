@@ -1,5 +1,5 @@
 import Forms from "./modules/forms/index.js";
-// import * as flsFunctions from "./modules/functions.js";
+import * as flsFunctions from "./modules/functions.js";
 import Menu from "./modules/menu.js";
 import Modals from "./modules/modals.js";
 // import transformMenu from "./modules/transformMenu.js"
