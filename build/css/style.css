@@ -942,16 +942,10 @@ textarea {
 
 .modal__send--success,
 .modal__send--error {
-  align-items: center;
-  font-size: 18px;
-  font-weight: 600;
+  text-align: center;
+  font-size: 24px;
   padding: 25px;
   margin: 200px;
-}
-
-.modal__send--success span,
-.modal__send--error span {
-  text-align: center;
 }
 
 .modal__send--success {
@@ -1140,6 +1134,7 @@ textarea {
   .modal__send--success,
   .modal__send--error {
     margin: 100px;
+    font-size: 22px;
   }
 }
 
@@ -1236,6 +1231,7 @@ textarea {
   .modal__send--success,
   .modal__send--error {
     margin: 50px;
+    font-size: 20px;
   }
 }
 

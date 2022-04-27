@@ -32,7 +32,6 @@ export const getAttr = (selector) => {
 };
 
 export const throttle = (func, ms) => {
-
   let isLocked = false;
 
   return function() {
@@ -50,3 +49,5 @@ export const throttle = (func, ms) => {
     }, ms)
   }
 };
+
+export const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;

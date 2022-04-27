@@ -3,7 +3,7 @@ import FormSend from "./send.js";
 
 export default class Forms {
   static instance = "[data-js-form]";
-  static els = {
+  static formElements = {
     input: "[data-js-input-required]",
   };
 
@@ -15,11 +15,10 @@ export default class Forms {
     this.bindEvents();
   };
 
-  handleSubmit(e) {
-    //const target = e.target;
-    const {target} = e;
+  handleSubmit(event) {
+    const {target} = event;
     if (target.matches(Forms.instance)) {
-      e.preventDefault();
+      event.preventDefault();
       if (Validation.isValid(target)) {
         FormSend.send(target)
         .then(
@@ -32,8 +31,8 @@ export default class Forms {
   };
 
   bindEvents() {
-    document.addEventListener("submit", (e) => {
-      this.handleSubmit(e);
+    document.addEventListener("submit", (event) => {
+      this.handleSubmit(event);
     })
   };
 }

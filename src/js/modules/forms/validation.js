@@ -3,7 +3,7 @@ import { getAttr } from "../functions.js";
 
 export default class Validation {
   static getInputs(form) {
-    return [...form.querySelectorAll(Forms.els.input)];
+    return [...form.querySelectorAll(Forms.formElements.input)];
   };
 
   static expression = {
@@ -24,9 +24,7 @@ export default class Validation {
     let result = true;
 
     inputs.forEach(input => {
-
-      const validateType = input.getAttribute(getAttr(Forms.els.input));
-
+      const validateType = input.getAttribute(getAttr(Forms.formElements.input));
       const validationFn = Validation.patterns.has(validateType)
         ? Validation.patterns.get(validateType)
         : Validation.patterns.get("");

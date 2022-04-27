@@ -1,6 +1,6 @@
 import { getConfig } from "./functions.js";
 
-export const els = {
+export const modalElements = {
   modal: "[data-js-modal]",
   openButton: "[data-js-modal-open-button]",
   closeButton: "[data-js-modal-close-button]",
@@ -16,9 +16,8 @@ export default class Modals {
 
   handleOpenButtonClick(event) {
     event.preventDefault();
-    const config = getConfig(event.target, els.openButton);
+    const config = getConfig(event.target, modalElements.openButton);
     
-    //const src = config.src;
     const { src } = config
     if (!src) {
       console.debug("Selector is not found data-js attribute of element:");
@@ -59,18 +58,17 @@ export default class Modals {
   }
 
   handleClick(event) {
-    //const target = event.target;
     const { target } = event;
     const isMatches = (selector) => target.matches(selector);
 
     switch (true) {
-      case isMatches(els.openButton):
+      case isMatches(modalElements.openButton):
         this.handleOpenButtonClick(event);
         break;
-      case isMatches(els.closeButton):
+      case isMatches(modalElements.closeButton):
         this.handleCloseButtonClick(event);
         break;
-      case isMatches(els.modal):
+      case isMatches(modalElements.modal):
         this.handleCloseButtonClick(event);
         break;
       default:

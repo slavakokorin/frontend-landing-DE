@@ -3,21 +3,21 @@
     <form action="./files/exampleSuccessForm.json" method="GET" id="feedback-form" novalidate autocomplete="off" data-js-form>
       <div class="modal__content">
         <div class="feedback-form__header">
-          <p class="feedback-form__title">SEND US MESSAGE</p>
+          <h2 class="feedback-form__title">SEND US MESSAGE</h2>
           <button type="button" class="button form__close-button" data-js-modal-close-button>x</button>
         </div>
         <div class="feedback-form__main">
           <div class="feedback-form__row">
             <label for="name">Full Name</label>
-            <input type="text" placeholder="Your Name (up to 20 latin letters and numbers)" class="feedback-form__input" data-js-input-required="name">
+            <input id="name" type="text" placeholder="Your Name (up to 20 latin letters & numbers)" class="feedback-form__input" data-js-input-required="name">
           </div>
           <div class="feedback-form__row">
             <label for="email">EMAIL</label>
-            <input type="email" placeholder="Your Email" class="feedback-form__input" data-js-input-required="email">
+            <input id="email" type="email" placeholder="Your Email" class="feedback-form__input" data-js-input-required="email">
           </div>
           <div class="feedback-form__row">
             <label for="textarea">Message</label>
-            <textarea type="text" placeholder="Your Message (only 120 letters)" class="feedback-form__input" data-js-input-required="message"></textarea>
+            <textarea id="textarea" placeholder="Your Message (only 0 - 120 letters)" class="feedback-form__input" data-js-input-required="message"></textarea>
           </div>
         </div>
         <button type="submit" class="button submit">SUBMIT</button>
