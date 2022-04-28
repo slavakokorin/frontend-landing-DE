@@ -956,14 +956,10 @@ textarea {
 
 .not-active-modal {
   visibility: hidden;
-  opacity: 0;
-  transition: 0.8s;
 }
 
 .active-modal {
   visibility: visible;
-  opacity: 1;
-  transition: 0.8s;
 }
 
 .active-modal .modal__content {
@@ -1002,9 +998,9 @@ textarea {
   background: var(--main-bg-color);
   box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
   border-radius: 10px;
-  transition: 0.8s;
   opacity: 0;
   transform: translate(0px, -100%);
+  transition: all 0.8s ease 0s;
 }
 
 .modal__send--success,

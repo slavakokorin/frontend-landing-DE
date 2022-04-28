@@ -4,6 +4,7 @@ const menuElements = {
   headerTop: "[data-js-header-top]",
   menuButton: "[data-js-menu-button]",
   menu: "[data-js-menu]",
+  menuLinkButton: "[data-js-menu-link]",
 }
 
 export default class Menu {
@@ -45,6 +46,11 @@ export default class Menu {
 
     switch (true) {
       case isMatches(menuElements.menuButton):
+        console.log('1');
+        this.toggleMenu();
+        break;
+      case isMatches(menuElements.menuLinkButton):
+        console.log('2');
         this.toggleMenu();
         break;
       default:

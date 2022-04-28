@@ -21,10 +21,10 @@ export const getConfig = (element, selector) => {
   try {
     json = JSON.parse(attributeValue);
   } catch (error) {
-    console.debug(error)
+    console.debug(error);
   }
 
-  return json
+  return json;
 }
 
 export const getAttr = (selector) => {
