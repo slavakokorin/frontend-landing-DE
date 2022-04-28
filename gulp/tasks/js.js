@@ -21,20 +21,6 @@ export const js = () => {
             template: 'build/index.html',
           })
         ],
-        module: {
-          rules: [
-            {
-              test: /\.js$/,
-              exclude: /(node_modules)/,
-              use: {
-                loader: 'babel-loader',
-                options: {
-                  presets: ['@babel/preset-env']
-                }
-              }
-            }
-          ]
-        }
       })
     )
     .pipe(app.gulp.dest(app.path.build.html))

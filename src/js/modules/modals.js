@@ -69,6 +69,7 @@ export default class Modals {
         this.handleCloseButtonClick(event);
         break;
       case isMatches(modalElements.modal):
+        console.log('!');
         this.handleCloseButtonClick(event);
         break;
       default:

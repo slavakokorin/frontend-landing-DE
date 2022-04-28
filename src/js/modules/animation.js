@@ -2,7 +2,7 @@ import { throttle, offset } from "./functions.js";
 
 const animItems = [...document.querySelectorAll('[data-js-anim-items]')];
 
-export default class Animation {
+export default class AnimationPageElements {
   constructor() {
     this.bindEvents();
   }
