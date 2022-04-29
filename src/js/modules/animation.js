@@ -1,4 +1,4 @@
-import { throttle, offset } from "./functions.js";
+import { throttle, offset } from './functions.js';
 
 const animItems = [...document.querySelectorAll('[data-js-anim-items]')];
 
@@ -17,18 +17,18 @@ export default class AnimationPageElements {
       const animStart = 8;
       let animItemPoint = window.innerHeight - animItemHeight / animStart;
 
-      if(animItemHeight > window.innerHeight) {
+      if (animItemHeight > window.innerHeight) {
         animItemPoint = window.innerHeight - window.innerHeight / animStart;
       }
       
       const ACTIVE_SELECTOR = '_active';
 
-      if((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
+      if ((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
         animItem.classList.add(ACTIVE_SELECTOR);
       } else {
         animItem.classList.remove(ACTIVE_SELECTOR);
       }
-    })
+    });
   }
 
   bindEvents() {

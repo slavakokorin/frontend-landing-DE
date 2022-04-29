@@ -1,12 +1,12 @@
-import { getConfig } from "./functions.js";
+import { getConfig } from './functions.js';
 
 export const modalElements = {
-  modal: "[data-js-modal]",
-  openButton: "[data-js-modal-open-button]",
-  closeButton: "[data-js-modal-close-button]",
-}
+  modal: '[data-js-modal]',
+  openButton: '[data-js-modal-open-button]',
+  closeButton: '[data-js-modal-close-button]',
+};
 
-const body = document.body;
+const { body } = document;
 const menu = document.querySelector('[data-js-header-top]');
 
 export default class Modals {
@@ -18,9 +18,9 @@ export default class Modals {
     event.preventDefault();
     const config = getConfig(event.target, modalElements.openButton);
     
-    const { src } = config
+    const { src } = config;
     if (!src) {
-      console.debug("Selector is not found data-js attribute of element:");
+      console.debug('Selector is not found data-js attribute of element:');
       console.debug(event.targret);
       return;
     }
@@ -28,10 +28,10 @@ export default class Modals {
     const modalElement = document.querySelector(src);
 
     if (!modalElement) {
-      console.debug("Modal element by `${src}` selector is not found");
+      console.debug(`Modal element by ${src} selector is not found`);
       return;
     }
-    
+
     modalElement.classList.add('active-modal');
     menu.classList.remove('header__top--fixed');
     body.classList.add('compensation-padd');
@@ -39,8 +39,8 @@ export default class Modals {
   }
 
   static closeLastModal() {
-    const allOpenedModals = document.querySelectorAll('.active-modal')
-    const lastModal = [...allOpenedModals].at(-1)
+    const allOpenedModals = document.querySelectorAll('.active-modal');
+    const lastModal = [...allOpenedModals].at(-1);
 
     if (!lastModal) {
       return;
@@ -80,13 +80,13 @@ export default class Modals {
   bindEvents() {
     document.addEventListener('click', (event) => {
       this.handleClick(event);
-    })
+    });
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
         event.preventDefault();
         Modals.closeLastModal();
       }
-    })
+    });
   }
 }

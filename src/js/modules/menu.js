@@ -1,11 +1,11 @@
-import { scrollPosition, throttle } from "./functions.js";
+import { scrollPosition, throttle } from './functions.js';
 
 const menuElements = {
-  headerTop: "[data-js-header-top]",
-  menuButton: "[data-js-menu-button]",
-  menu: "[data-js-menu]",
-  menuLinkButton: "[data-js-menu-link]",
-}
+  headerTop: '[data-js-header-top]',
+  menuButton: '[data-js-menu-button]',
+  menu: '[data-js-menu]',
+  menuLinkButton: '[data-js-menu-link]',
+};
 
 export default class Menu {
   constructor() {
@@ -27,8 +27,8 @@ export default class Menu {
     const menuBody = document.querySelector(menuElements.headerTop);
     const button = document.querySelector(menuElements.menuButton);
     const position = scrollPosition();
-    
-    if(position > 200){
+
+    if (position > 200) {
       menuBody.classList.add('bg--gray-blue');
       button.classList.add('bg--gray-blue');
       menuBody.classList.add('header__top--is-scrolled');
@@ -36,7 +36,7 @@ export default class Menu {
     else if (position < 200) {
       menuBody.classList.remove('bg--gray-blue');
       button.classList.remove('bg--gray-blue');
-      menuBody.classList.remove('header__top--is-scrolled');      
+      menuBody.classList.remove('header__top--is-scrolled');
     }
   }
 
@@ -59,7 +59,7 @@ export default class Menu {
   bindEvents() {
     document.addEventListener('click', (event) => {
       this.handleClick(event);
-    })
+    });
 
     window.onscroll = throttle(this.transformation, 300);
   }
