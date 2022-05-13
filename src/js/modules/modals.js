@@ -11,13 +11,12 @@ const menu = document.querySelector('[data-js-header-top]');
 
 export default class Modals {
   constructor() {
-    this.bindEvents();
+    this.constructor.bindEvents();
   }
 
-  handleOpenButtonClick(event) {
+  static handleOpenButtonClick(event) {
     event.preventDefault();
     const config = getConfig(event.target, modalElements.openButton);
-    
     const { src } = config;
     if (!src) {
       console.debug('Selector is not found data-js attribute of element:');
@@ -52,32 +51,31 @@ export default class Modals {
     body.classList.remove('lock');
   }
 
-  handleCloseButtonClick(event) {
+  static handleCloseButtonClick(event) {
     event.preventDefault();
     Modals.closeLastModal();
   }
 
-  handleClick(event) {
+  static handleClick(event) {
     const { target } = event;
     const isMatches = (selector) => target.matches(selector);
 
     switch (true) {
       case isMatches(modalElements.openButton):
-        this.handleOpenButtonClick(event);
+        Modals.handleOpenButtonClick(event);
         break;
       case isMatches(modalElements.closeButton):
-        this.handleCloseButtonClick(event);
+        Modals.handleCloseButtonClick(event);
         break;
       case isMatches(modalElements.modal):
-        console.log('!');
-        this.handleCloseButtonClick(event);
+        Modals.handleCloseButtonClick(event);
         break;
       default:
         break;
     }
   }
 
-  bindEvents() {
+  static bindEvents() {
     document.addEventListener('click', (event) => {
       this.handleClick(event);
     });
@@ -85,7 +83,7 @@ export default class Modals {
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
         event.preventDefault();
-        Modals.closeLastModal();
+        this.closeLastModal();
       }
     });
   }

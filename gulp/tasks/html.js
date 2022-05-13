@@ -6,9 +6,9 @@ export const html = () => {
   return app.gulp.src(app.path.src.html)
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
-        title: "HTML",
-        message: "ERROR: <%= error.message %>",
-      })
+        title: 'HTML',
+        message: 'ERROR: <%= error.message %>',
+      }),
     ))
     .pipe(fileInclude())
     .pipe(app.plugins.replace(/@img\//g, 'img/'))
@@ -16,7 +16,7 @@ export const html = () => {
       app.plugins.if(
         app.isBuild,
         webpHtmlNosvg(),
-      )
+      ),
     )
     .pipe(
       app.plugins.if(
@@ -28,8 +28,8 @@ export const html = () => {
             'cover': 0,
             'to': [
               'css',
-              'js'
-            ]
+              'js',
+            ],
           },
           'output': {
             'file': 'gulp/version.json',

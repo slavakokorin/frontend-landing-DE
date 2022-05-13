@@ -6,7 +6,7 @@ import AnimationPageElements from './modules/animation.js';
 
 flsFunctions.isWebp();
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   new Modals();
   new Forms();
   new Menu();

@@ -2,6 +2,10 @@ import Forms from './index.js';
 import { getAttr } from '../functions.js';
 
 export default class Validation {
+  static stateClasses = {
+    invalid: 'is-invalid',
+  };
+
   static getInputs(form) {
     return [...form.querySelectorAll(Forms.formElements.input)];
   }
@@ -15,7 +19,7 @@ export default class Validation {
     ['', (input) => Validation.isValidateEmpty(input)],
     ['email', (input) => Validation.isValidateEmail(input)],
     ['name', (input) => Validation.isValidateName(input)],
-    ['message', (input) => input.value.length < 12],
+    ['message', (input) => input.value.length < 120],
   ]);
 
   static isValid(form, isHighlight = true) {
@@ -30,7 +34,6 @@ export default class Validation {
         : Validation.patterns.get('');
 
       const isValid = validationFn(input);
-      
       if (isHighlight) {
         Validation.setInputState(input, isValid);
       }
@@ -44,9 +47,9 @@ export default class Validation {
   }
 
   static setInputState(input, isValid = true) {
-    isValid
-      ? input.classList.remove(Forms.stateClasses.invalid)
-      : input.classList.add(Forms.stateClasses.invalid);
+    return isValid
+      ? input.classList.remove(Validation.stateClasses.invalid)
+      : input.classList.add(Validation.stateClasses.invalid);
   }
 
   static isValidateEmpty(input) {

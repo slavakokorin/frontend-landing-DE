@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import { path } from './gulp/config/path.js';
+import path from './gulp/config/path.js';
 import { plugins } from './gulp/config/plugins.js';
 import { copy } from './gulp/tasks/copy.js';
 import { reset } from './gulp/tasks/reset.js';

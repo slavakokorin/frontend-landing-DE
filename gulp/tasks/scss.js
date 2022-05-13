@@ -13,9 +13,9 @@ export const scss = () => {
   return app.gulp.src(app.path.src.scss, { sourcemaps: app.isDev })
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
-        title: "SCSS",
-        message: "Error: <%= error.message %>",
-      })
+        title: 'SCSS',
+        message: 'Error: <%= error.message %>',
+      }),
     ))
     .pipe(app.plugins.replace(/@img\//g, '../img/'))
     .pipe(sass({
@@ -29,16 +29,16 @@ export const scss = () => {
     )
     .pipe(webpcss(
       {
-        webpClass: ".webp",
-        noWebpClass: ".no-webp",
-      }
+        webpClass: '.webp',
+        noWebpClass: '.no-webp',
+      },
     ))
     .pipe(
       app.plugins.if(
         app.isBuild,
         autoprefixer({
           grid: true,
-          overrideBrowserlist: ["last 3 versions"],
+          overrideBrowserlist: ['last 3 versions'],
           cascade: true,
         }),
       ),
@@ -48,10 +48,10 @@ export const scss = () => {
       app.plugins.if(
         app.isBuild,
         cleanCss(),
-      )
+      ),
     )
     .pipe(rename({
-      extname: ".min.css",
+      extname: '.min.css',
     }))
     .pipe(app.gulp.dest(app.path.build.css))
     .pipe(app.plugins.browsersync.stream());

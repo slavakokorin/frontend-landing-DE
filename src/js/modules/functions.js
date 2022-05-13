@@ -1,13 +1,15 @@
 export function isWebp() {
   function testWebP(callback) {
     const webP = new Image();
-    webP.onload = webP.onerror = function () {
+    webP.onerror = () => {
       callback(webP.height === 2);
     };
+
+    webP.onload = webP.onerror;
     webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
   }
 
-  testWebP(function (support) {
+  testWebP((support) => {
     const className = support === true ? 'webp' : 'no-webp';
     document.documentElement.classList.add(className);
   });
@@ -27,9 +29,7 @@ export const getConfig = (element, selector) => {
   return json;
 };
 
-export const getAttr = (selector) => {
-  return selector.substring(1, selector.length - 1);
-};
+export const getAttr = (selector) => selector.substring(1, selector.length - 1);
 
 export const throttle = (func, ms) => {
   let isLocked = false;
@@ -53,7 +53,7 @@ export const throttle = (func, ms) => {
 export const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 
 export const offset = (el) => {
-  const rect = el.getBoundingClientRect(),
-  scrollTop = scrollPosition();
+  const rect = el.getBoundingClientRect();
+  const scrollTop = scrollPosition();
   return { top: rect.top + scrollTop };
 };

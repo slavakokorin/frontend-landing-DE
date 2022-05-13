@@ -6,9 +6,9 @@ export const otfToTtf = () => {
   return app.gulp.src(`${app.path.srcFolder}/fonts/*.otf`, {})
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
-        title: "FONTS",
-        message: "Error: <%= error.message %>",
-      })
+        title: 'FONTS',
+        message: 'Error: <%= error.message %>',
+      }),
     ))
     .pipe(fonter({
       formats: ['ttf'],
@@ -20,9 +20,9 @@ export const ttfToWoff = () => {
   return app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`, {})
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
-        title: "FONTS",
-        message: "Error: <%= error.message %>",
-      })
+        title: 'FONTS',
+        message: 'Error: <%= error.message %>',
+      }),
     ))
     .pipe(fonter({
       formats: ['woff'],
@@ -34,17 +34,17 @@ export const ttfToWoff = () => {
 };
 
 export const fontsStyle = () => {
-  let fontsFile = `${app.path.srcFolder}/scss/fonts.scss`;
+  const fontsFile = `${app.path.srcFolder}/scss/fonts.scss`;
 
   fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
     if (fontsFiles) {
       if (!fs.existsSync(fontsFile)) {
         fs.writeFile(fontsFile, '', cb);
         let newFileOnly;
-        for (var i = 0; i < fontsFiles.length; i++) {
-          let fontFileName = fontsFiles[i].split('.')[0];
+        for (let i = 0; i < fontsFiles.length; i += 1) {
+          const fontFileName = fontsFiles[i].split('.')[0];
           if (newFileOnly !== fontFileName) {
-            let fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName;
+            const fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName;
             let fontWeight = fontFileName.split('-')[1] ? fontFileName.split('-')[1] : fontFileName;
             if (fontWeight.toLowerCase() === 'thin') {
               fontWeight = 100;

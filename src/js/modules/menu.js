@@ -9,10 +9,10 @@ const menuElements = {
 
 export default class Menu {
   constructor() {
-    this.bindEvents();
+    this.constructor.bindEvents();
   }
 
-  toggleMenu() {
+  static toggleMenu() {
     const menu = document.querySelector(menuElements.menu);
     const ACTIVE_SELECTOR = 'menu--active';
 
@@ -23,7 +23,7 @@ export default class Menu {
     }
   }
 
-  transformation() {
+  static transformation() {
     const menuBody = document.querySelector(menuElements.headerTop);
     const button = document.querySelector(menuElements.menuButton);
     const position = scrollPosition();
@@ -32,35 +32,34 @@ export default class Menu {
       menuBody.classList.add('bg--gray-blue');
       button.classList.add('bg--gray-blue');
       menuBody.classList.add('header__top--is-scrolled');
-    }
-    else if (position < 200) {
+    } else if (position < 200) {
       menuBody.classList.remove('bg--gray-blue');
       button.classList.remove('bg--gray-blue');
       menuBody.classList.remove('header__top--is-scrolled');
     }
   }
 
-  handleClick(event) {
+  static handleClick(event) {
     const { target } = event;
     const isMatches = (selector) => target.matches(selector);
 
     switch (true) {
       case isMatches(menuElements.menuButton):
-        this.toggleMenu();
+        Menu.toggleMenu();
         break;
       case isMatches(menuElements.menuLinkButton):
-        this.toggleMenu();
+        Menu.toggleMenu();
         break;
       default:
         break;
     }
   }
 
-  bindEvents() {
+  static bindEvents() {
     document.addEventListener('click', (event) => {
       this.handleClick(event);
     });
 
-    window.onscroll = throttle(this.transformation, 300);
+    window.onscroll = throttle(Menu.transformation, 300);
   }
 }
